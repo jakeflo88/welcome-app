@@ -1,0 +1,28 @@
+/* Styles for welcome App */
+
+/* Welcome styles */
+
+#welcome {
+	text-align: center;
+}
+
+#input {
+	text-align: center;
+	border: 1px solid black;
+	border-radius: 2px;
+	width: 70%;
+	margin: 0 auto;
+}
+
+#info {
+	text-align: center;
+	margin: 0 auto;
+}
+
+#inside h2 {
+	text-align: center;
+}
+
+#whoweare p {
+	text-align: center;
+}

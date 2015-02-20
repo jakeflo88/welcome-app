@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="starter">
+
+    <ion-pane>
+      <ion-header-bar class="bar-stable">
+        <h1 class="title">The Jungle</h1>
+      </ion-header-bar>
+      <ion-content>
+        <div id="everything" ng-controller="LoginController">
+
+          <div id="login" ng-show="display1">
+            <br></br>
+            <h1 id="welcome">Signup below to enter!</h1>
+            <br></br>
+            <br></br>
+            <form id = "info">
+              <input id="input" type="text" placeholder="Email Address" name="email" ng-model="email"><br>
+              <input id="input" type="text" placeholder="Password" name="password" ng-model="password"><br>
+              <input id="signup" type="submit" value="Signup!" ng-click="signup()">
+            </form>
+          </div>
+
+          <div id="inside" ng-show="display2">
+            <h1>Hello, {{email}}!</h1>
+            <br></br>
+            <h2>Welcome to The Jungle!</h2>
+            <br></br>
+            <h2>We've got:</h2>
+            <br></br>
+
+            <ion-list>
+              <ion-item>Fun'N Games</ion-item>
+              <ion-item>Everything You Want</ion-item>
+              <br></br>
+              <ion-item ng-click="whoarewe()">Who are we??</ion-item>
+            </ion-list>
+          </div>
+
+          <div id="whoweare" ng-show="display3">
+            <br></br>
+            <br></br>
+            <p>We are the people that can find</p>
+            <p>Whatever you may need</p>
+            <p>If you got the money, honey</p>
+            <p>We got your disease</p>
+          </div>
+        </div>
+      </ion-content>
+    </ion-pane>
+  </body>
+</html>
